@@ -1,1 +1,57 @@
 /* developer styles go here */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* :nth-child selects elements based on their position as a child 
+a parent container. */
+section:first-child {
+    background-color: red;
+}
+section:nth-child(2) {
+    background-color: pink;
+}
+section:nth-child(3) {
+    background-color: teal;
+}
+section:nth-child(4) {
+    background: thistle;
+}
+section:nth-child(5) {
+    background-color: green;
+}
+section:last-child {
+    background-color: steelblue;
+}
+
+
+/* applies only to the footer because its the only section with 1 child,
+the other sections have 6 children. */
+section:only-child {
+background-color: whitesmoke;
+}
+
+/* nth of type - selects element(s) based on their position as a child, 
+as that type of selector */
+p:first-of-type {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+p:last-of-type {
+    font-size: 1rem;
+}
+
+/* quick & easy to use, but can wind up selecting other elements
+we dont mean to select i.e. ...  */
+
+/* p:nth-last-of-type(2) {
+    display: none;
+} */
